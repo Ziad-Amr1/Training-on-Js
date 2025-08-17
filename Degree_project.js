@@ -43,19 +43,6 @@ function getAllStudentsDegree() {
     return { sum };
 }
 
-// function getAverageOfAllStudents() {
-//     let { sum } = getAllStudentsDegree();
-//     let avr = sum / allStudents.length;
-//     return { avr };
-// }
-
-// function printAllStudentsAverage() {
-//     let { avr } = getAverageOfAllStudents();
-//     avr = parseFloat(avr.toFixed(2));
-//     console.log('Total count of students = ' + allStudents.length);
-//     console.log('Average for all students = ' + avr);
-// }
-
 function getPassedStudents() {
 
     let sum2 = 0;
@@ -74,19 +61,6 @@ function getPassedStudents() {
     return { sum2, count };
 }
 
-// function getAverageOfPassedStudents() {
-//     let { sum2, count } = getPassedStudents();
-//     let avr2 = sum2 / count;
-//     return { avr2, count };
-// }
-
-// function printPassedStudentsAverage() {
-//     let { avr2, count } = getAverageOfPassedStudents();
-//     avr2 = parseFloat(avr2.toFixed(2));
-//     console.log('Total count of students who passed = ' + count);
-//     console.log('Average for students successed = ' + avr2);
-// }
-
 function Calc(){
     let { sum } = getAllStudentsDegree();
     let { sum2, count } = getPassedStudents();
@@ -100,16 +74,6 @@ function Calc(){
     return { avr, avr2, count };
 }
 
-// function getAverage() {
-//     let { avr, avr2, count } = Calc();
-
-//     avr = parseFloat(avr.toFixed(2));
-//     avr2 = parseFloat(avr2.toFixed(2));
-//     count = parseInt(count);
-
-//     return { avr, avr2, count };
-// }
-
 function printAllAverage() {
     let { avr, avr2, count } = Calc();
 
@@ -119,6 +83,4 @@ function printAllAverage() {
     console.log('Total count of students who passed = ' + count);
 };
 
-// printAllStudentsAverage();
-// printPassedStudentsAverage();
 printAllAverage();
