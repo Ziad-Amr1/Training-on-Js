@@ -16,8 +16,13 @@ function getAllStudentsDegree() {
 
     for (let person of allStudents) {
         sum += person.degree;
-        
-    switch(true) {
+        printStudentStatus(person);
+    }
+    return { sum };
+}
+
+function printStudentStatus(person) {
+        switch(true) {
         case (person.degree === 100):
             console.log(person.name + ' is a genius!');
             break;
@@ -39,8 +44,6 @@ function getAllStudentsDegree() {
         default:
             console.log(person.name + ' has an invalid degree!');
     }
-    }
-    return { sum };
 }
 
 function getPassedStudents() {
@@ -61,7 +64,7 @@ function getPassedStudents() {
     return { sum2, count };
 }
 
-function Calc(){
+function calculateAverages(){
     let { sum } = getAllStudentsDegree();
     let { sum2, count } = getPassedStudents();
     let avr = sum / allStudents.length;
@@ -75,7 +78,7 @@ function Calc(){
 }
 
 function printAllAverage() {
-    let { avr, avr2, count } = Calc();
+    let { avr, avr2, count } = calculateAverages();
 
     console.log('Total count of students = ' + allStudents.length);
     console.log('Average for all students = ' + avr);
